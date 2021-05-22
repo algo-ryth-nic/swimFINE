@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Swimwear | SWIMFINE</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/swimfine.ico" />
+
+    <script src="https://kit.fontawesome.com/16b11a0383.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="..//css/productStyles.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/mainFunctions.js"></script>
+
+
+    <!-- JS plugin AOS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- JS plugin SweetAlert  -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- initializing AOS -->
+    <script>
+        // run once fully loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init();
+        });
+    </script>
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <!-- logo container -->
+            <div class="logo-container">
+                <a href="../index.html">
+                    <h1>SWIM<span>FINE</span></h1>
+                </a>
+            </div>
+            
+            <!-- links container -->
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../index.html"> Home </a></li>
+                    <li><a href="profile.html"> Account </a></li>
+                    <li><a href="#"> About </a></li>
+                </ul>
+            </nav>
+
+            <!-- When not logged in -->
+            <div class="account-access">
+                <a href="login.html" class="login">Log In</a>
+                <!-- button -->
+                <button id = "bttn" onclick= "window.location.href='register.html';" type="reset"> Sign up </button>
+                <a href="./cart.html" id="view-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+
+            <!-- If succesfully logged in/registered -->
+            <div class="account-details">
+                <a href="profile.html" title="My Account" class="account-section">
+                    <span class="account-icon"><i class="far fa-user-circle"></i></span>
+                    <span class="account-name"></span>
+                </a>
+
+                <a href="./cart.html" id="view-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+            
+            <i id="menu-bttn" class="fas fa-bars fa-1x"></i>    
+        
+        </div>
+
+        <div class="header-main-content-container">
+            <div class="main-content">
+                <h1 class="main-title">All Products</h1>
+                <p class="main-desc">From performance swimsuits through to eye-catching two pieces, we design men/women's swimwear that excels. Find all our latest swimwear here.</p>
+            </div>
+           
+        </div>
+    </header>
+
+    <main>
+        <section class="all-products-section">
+
+            <div class="products-section">
+                <div data-aos="zoom-in-up" class="product-card">
+                        <div class="product-image">
+                            <img src="../img/gala-logo-aquashort-navy-bright-zest-811354-1.webp" alt="">
+                            <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                            <a href="cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                        </div>
+    
+                        <div class="product-details">
+                            <p class="product-category">Men/speedos</p>
+                            <a href="view-product.html" class="product-name" onclick="forViewProduct(this)">Swim shorts</a>
+                            <span class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half"></i>
+                            </span>
+    
+                            <span class="product-price"><span class="price-currency">$</span>12</span>    
+                        </div>
+                </div>        
+
+
+                <div data-aos="zoom-in-up" class="product-card">
+                    <div class="product-image">
+                        <img src="../img/allover-swimdress-black-jewel-pink-ecstatic-pink-splash.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div class="product-details">
+                        <p class="product-category">Women/swimdress</p>
+                        <a href="view-product.html" class="product-name" onclick="forViewProduct(this)">Swimdress Black/Pink</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+
+                        <span class="product-price"><span class="price-currency">$</span>19.35</span>    
+                    </div>
+                </div>
+
+
+                <div data-aos="zoom-in-up" class="product-card">
+                    <div class="product-image">
+                        <img src="../img/essential-splice-allover-kneesuit-black-chroma-blue-mirror.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div class="product-details">
+                        <p class="product-category">women/kneesuit</p>
+                        <a href="view-product.html" class="product-name" onclick="forViewProduct(this)">Splice blue mirror</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+
+                        <span class="product-price"><span class="price-currency">$</span>25.60</span>    
+                    </div>
+                </div>
+
+
+                <div data-aos="zoom-in-up" class="product-card">
+                    <div class="product-image">
+                        <img src="../img/gala-logo-aquashort-black-lava-red.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div class="product-details">
+                        <p class="product-category">Men/speedos</p>
+                        <a href="view-product.html" class="product-name" onclick="forViewProduct(this)">Aquashorts Lava Red</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+
+                        <span class="product-price"><span class="price-currency">$</span>21.00</span>    
+                    </div>
+                </div>
+
+
+                <div data-aos="zoom-in-up" class="product-card">
+                    <div class="product-image">
+                        <img src="../img/gala-logo-7cm-brief-navy-bright-zest.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div class="product-details">
+                        <p class="product-category">Men/underwear</p>
+                        <a href="view-product.html" class="product-name" onclick="forViewProduct(this)">Navy Bright zest</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+
+                        <span class="product-price"><span class="price-currency">$</span>15.30</span>    
+                    </div>
+                </div>
+
+
+                <div data-aos="zoom-in-up" class="product-card">
+                    <div class="product-image">
+                        <img src="../img/essential-splice-kneesuit-nordic-teal-oxide-grey-black.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div data-aos="zoom-in-up" class="product-details">
+                        <p class="product-category">Women/kneesuit</p>
+                        <a href="view-product.html" class="product-name" onclick="forViewProduct(this)">Nordic teal oxide</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+
+                        <span class="product-price"><span class="price-currency">$</span>20.00</span>    
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in-up" class="product-card">
+                    <div class="product-image">
+                        <img src="../img/leisure-16-inch-water-shorts-black-aqua-splash.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div data-aos="zoom-in-up" class="product-details">
+                        <p class="product-category">Men/leisure</p>
+                        <a href="view-product.html" class="product-name" onclick="forViewProduct(this)">16 inch aqua splash</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
+
+                        <span class="product-price"><span class="price-currency">$</span>24.50</span>    
+                    </div>
+                </div>
+
+
+                <div data-aos="zoom-in-up" class="product-card">
+                    <div class="product-image">
+                        <img src="../img/placement-aquashort-black-lava-red.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div data-aos="zoom-in-up" class="product-details">
+                        <p class="product-category">Men/speedos</p>
+                        <a href="view-product.html" class="product-name" onclick="forViewProduct(this)">Aquashorts lava black</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+
+                        <span class="product-price"><span class="price-currency">$</span>18.60</span>    
+                    </div>
+                </div>
+
+
+                <div data-aos="zoom-in-up" class="product-card">
+                    <div class="product-image">
+                        <img src="../img/placement-digital-v-jammer-black-lobster-violet.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div data-aos="zoom-in-up" class="product-details">
+                        <p class="product-category">Men/speedos</p>
+                        <a href="view-product.html" class="product-name" onclick="forViewProduct(this)">Black Loster violet</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+
+                        <span class="product-price"><span class="price-currency">$</span>23.75</span>    
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in-up" class="product-card">
+                    <div class="product-image">
+                        <img src="../img/racerback-swimdress-with-boyleg-electric-pink-black.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div data-aos="zoom-in-up" class="product-details">
+                        <p class="product-category">women/swimdress</p>
+                        <a href="view-product.html" class="product-name" onclick="forViewProduct(this)">Racerback electric pink</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+
+                        <span class="product-price"><span class="price-currency">$</span>12</span>    
+                    </div>
+                </div>
+
+
+                <div data-aos="zoom-in-up" class="product-card">
+                    <div class="product-image">
+                        <img src="../img/short-sleeve-sun-top-navy-white.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div data-aos="zoom-in-up" class="product-details">
+                        <p class="product-category">Men/short sleeve</p>
+                        <a href="view-product.html" class="product-name" onclick="forViewProduct(this)">sun top navy white</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+
+                        <span class="product-price"><span class="price-currency">$</span>28.60</span>    
+                    </div>
+                </div>
+
+
+                <div data-aos="zoom-in-up" class="product-card">
+                    <div class="product-image">
+                        <img src="../img/racerback-swimdress-with-boyleg-black-electric-pink.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div data-aos="zoom-in-up" class="product-details">
+                        <p class="product-category">Women/swimdress</p>
+                        <a href="view-product.html" class="product-name" onclick="forViewProduct(this)">Racerback electric black</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+
+                        <span class="product-price"><span class="price-currency">$</span>17.50</span>    
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in-up" class="product-card">
+                    <div class="product-image">
+                        <img src="../img/boom-ultra-pace-cap-red-black-811237-8112373991-a.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div data-aos="zoom-in-up" class="product-details">
+                        <p class="product-category">Men/Accessories</p>
+                        <a href="view-product.html" class="product-name" onclick="forViewProduct(this)">Ultra pace cap red</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+
+                        <span class="product-price"><span class="price-currency">$</span>15.30</span>    
+                    </div>
+                </div>
+
+
+                <div data-aos="zoom-in-up" class="product-card">
+                    <div class="product-image">
+                        <img src="../img/glide-mask-and-snorkel-set-grey-blue-801658-8016585052-a.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div data-aos="zoom-in-up" class="product-details">
+                        <p class="product-category">Men/Accessories</p>
+                        <a href="view-product.html" class="product-name" onclick="forViewProduct(this)">Mask/snort set grey</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+
+                        <span class="product-price"><span class="price-currency">$</span>12</span>    
+                    </div>
+                </div>
+
+
+                <div data-aos="zoom-in-up" class="product-card">
+                    <div class="product-image">
+                        <img src="../img/SPSW8MS411C771.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div data-aos="zoom-in-up" class="product-details">
+                        <p class="product-category">Men/swintrunks</p>
+                        <a href="view-product.html" class="product-name" onclick="forViewProduct(this)">shock blue static</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+
+                        <span class="product-price"><span class="price-currency">$</span>26.00</span>    
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in-up" class="product-card">
+                    <div class="product-image">
+                        <img src="../img/reflectwave-flex-2-in-1-water-shorts-black-bright-zest-white-811753-811753c717-a.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div data-aos="zoom-in-up" class="product-details">
+                        <p class="product-category">Men/swimsuit</p>
+                        <a href="view-product.html" class="product-name" onclick="forViewProduct(this)">Reflectwave flex 2</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+
+                        <span class="product-price"><span class="price-currency">$</span>28.75</span>    
+                    </div>
+                </div>
+
+
+                <div data-aos="zoom-in-up" class="product-card">
+                    <div class="product-image">
+                        <img src="../img/long-hair-cap-spearmint-806168-5.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div data-aos="zoom-in-up" class="product-details">
+                        <p class="product-category">Women/Accessories</p>
+                        <a href="view-product.html" class="product-name" onclick="forViewProduct(this)">SpearBlue</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+
+                        <span class="product-price"><span class="price-currency">$</span>12.10</span>    
+                    </div>
+                </div>
+
+
+                <div data-aos="zoom-in-up" class="product-card">
+                    <div class="product-image">
+                        <img src="../img/vivashine-printed-one-piece-swimsuit-black-white-oxide-grey-811830-1.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div data-aos="zoom-in-up" class="product-details">
+                        <p class="product-category">women/swimdress</p>
+                        <a href="view-product.html" class="product-name" onclick="forViewProduct(this)">vivashine one piece</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+
+                        <span class="product-price"><span class="price-currency">$</span>28.90</span>    
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

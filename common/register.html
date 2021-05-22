@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <!-- <link rel="stylesheet" href="css/registerStyles.css"> -->
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src = "../js/entry.js"></script>
+    <script src = "../js/mainFunctions.js"></script>
+    <link rel="stylesheet" href="../css/registerStyles.css">
+
+    <!-- JS plugin SweetAlert  -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- using event listerns to instantly show the if input is valid -->
+    <script>
+        // event listeners to execute once the page is loaded
+        $(document).ready(function (){
+            let correctColor = "#CAECAC";
+            let errorColor = "#FF9999";
+            // for email
+            $("#email").keyup(function(){
+                let inputEmail = this.value
+                if(validateEmail(inputEmail)){
+                    $("#email").css('background-color', correctColor);
+                }
+                else{
+                    $("#email").css('background-color', errorColor);
+                }
+            })
+            // for password
+            $("#pass").keyup(function(){
+                let inputPass = this.value
+                if(validatePassword(inputPass)){
+                    $("#pass").css('background-color', correctColor);
+                }
+                else{
+                    $("#pass").css('background-color', errorColor);
+                }
+
+            })
+
+            // for confirm password
+            $("#confirmPass").keyup(function(){
+                let inputPass = $("#pass").val()
+                let inputConfirm = this.value
+                if(inputPass === inputConfirm){
+                    $("#confirmPass").css('background-color', correctColor);
+                }
+                else{
+                    $("#confirmPass").css('background-color', errorColor);
+                }
+
+            })
+
+            $("#showPassCheckbox").click(function(){
+                if($("#showPassCheckbox").is(':checked')){
+                    $("#pass").attr("type", 'text');
+                    $("#confirmPass").attr("type", 'text');
+                }
+                else{
+                    $("#pass").attr("type", 'password');
+                    $("#confirmPass").attr("type", 'password');
+                }
+            })
+
+            $("#signUp").click(register)
+        })
+    </script>
+    
+</head>
+<body>
+    <div class="content-container">
+
+        <div class="logo-container">
+            <a href="../index.html">
+                <h1>SWIM<span>FINE</span></h1>
+            </a>
+        </div>
+
+        <div class="registration-container">
+            <form action="#">
+                <!-- ALl the register details here -->
+                <h1>Sign Up</h1>
+
+                <h4>Name</h4>
+                <input type="text" name="" id="username" placeholder="Enter Your Name">
+
+                <h4>Email</h4>
+                <input type="text" name="" id="email" placeholder="Enter Your Email">
+                <p>You can use Letters, numbers & password</p>
+                
+                <h4>Password</h4>
+                <div class="password-container">
+                    <input type="password" name="" id="pass" placeholder="Enter Your Password">
+                    <input type="password" name="" id="confirmPass" placeholder="Confirm Password">
+                </div>
+                <p>Use 8 or more characters with a mix of letters, numbers & symbols</p>
+				
+                <label for="showPassCheckbox">
+                    <input type="checkbox" id="showPassCheckbox" style="width: 20px; height: 10px;margin: 10px 0px;">
+                    Show Password
+                </label>
+
+                <button id="signUp" type="reset">Sign Up</button>
+            </form>
+        </div>
+
+        <div class="wrapper-right-panel">
+            <div class="overlay">
+                <div class="right-panel-container">
+                    <h1> Join Us! </h1>
+                    <p>With SWIMFINE you can buy hundreds of swimming related accessories for any fit and all in affortable prices<br>Join Us today! Start looking Fine as ice! </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

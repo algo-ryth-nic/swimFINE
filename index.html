@@ -1,0 +1,407 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swimming Ware | E-commerce Website</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/swimfine.ico" />
+
+    <!-- jQuery -->
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/b5f4ebf77f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css//mainStyles.css">
+
+    <script src="js/mainFunctions.js"></script>
+    
+    <!-- JS plugin SweetAlert  -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+<body>
+    <!-- Header!! -->
+    <header>
+        <div class="navbar">
+            <!-- logo container -->
+            <div class="logo-container">
+                <a href="index.html">
+                    <h1>SWIM<span>FINE</span></h1>
+                </a>
+            </div>
+            
+            
+            <!-- links container -->
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#product-collection"> Home </a></li>
+                    <li><a href="#latest-products"> Products </a></li>
+                    <li><a href="#"> About </a></li>
+                </ul>
+            </nav>
+
+            <div class="account-access">
+                <a href="common/login.html" class="login">Log In</a>
+                <!-- button -->
+                <button id = "bttn"> Sign up </button>
+                <a href="common/cart.html" id="view-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+            
+            <!-- If succesfully logged in/registered -->
+            <div class="account-details">
+                <a href="common/profile.html" title="My Account" class="account-section">
+                    <span class="account-icon"><i class="far fa-user-circle"></i></span>
+                    <span class="account-name"></span>
+                </a>
+                
+                <a href="common/cart.html" id="view-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+            
+            <i id="menu-bttn" class="fas fa-bars fa-1x"></i>    
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Summer is near !</h1>
+                <h4><span> 69% </span>SALE OFF</h4>
+            </div>
+            <button id="shop-now" onclick="location='common/products.html'">shop now</button>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main>
+        <!-- Product Collection -->
+        <section id="product-collection"class="product-collections">
+            <!-- Male Swimwear -->
+            <div class="collection-card">
+                <img src="img/sexy-model-1.png" alt="">
+                <div class="collection-card-text">
+                    <h3>Men</h3>
+                    <h2>Swimsuits</h2>
+                    <a href="common/products.html">View Collection</a>
+                </div>
+            </div>
+
+            <!-- Felmale Swimwear -->
+            <div class="collection-card">
+                <img src="img/sexy-model-2.png" alt="">
+                <div class="collection-card-text">
+                    <h3>Women</h3>
+                    <h2>Swimsuits</h2>
+                    <a href="common/products.html">View Collection</a>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Featured Content -->
+        <section class="featured-products">
+            <!-- Featured Title -->
+            <div class="section-title">
+                <h1>Featured Products</h1>
+                <a href="common/products.html">View All</a>
+            </div>
+
+            <!-- Featured Products -->
+            <div class="featured-content">
+                <!-- Product 1 -->
+                <div class="featured-card">
+                    <div class="card-label"><span>NEW</span></div>
+                    <a href="#">
+                        <!-- Card header -->
+                        <div class="feature-card-header">
+                            <!-- image -->
+                            <img src="img/blue-pants.webp" alt="">
+                        </div>
+                        
+                        <div class="feature-card-footer">
+                            <div class="product-name">
+                                <h2>Blue Pants</h2>
+                            </div>
+                            <span style="color: Mediumslateblue; font-size: 14px;">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half"></i>
+                            </span>
+                            <div class="price">
+                                <h3>$25.40</h3>
+                            </div>
+                        </div>
+                        
+                    </a>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="featured-card">
+                    <div class="card-label"><span>NEW</span></div>
+                    <a href="#">
+                        <!-- Card header -->
+                        <div class="feature-card-header">
+                            <!-- image -->
+                            <img src="img/allover-swimdress-black-jewel-pink-ecstatic-pink-splash.webp" alt="">
+                        </div>
+                        
+                        <div class="feature-card-footer">
+                            <div class="product-name">
+                                <h2>Swimdress Black/Pink</h2>
+                            </div>
+                            <span style="color: Mediumslateblue; font-size: 14px;">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half"></i>
+                            </span>
+                            <div class="price">
+                                <h3>$23.20</h3>
+                            </div>
+                        </div>
+                        
+                    </a>
+                </div>
+                
+
+                <!-- Product 3 -->
+                <div class="featured-card">
+                    <div class="card-label"><span>NEW</span></div>
+                    <a href="#">
+                        <!-- Card header -->
+                        <div class="feature-card-header">
+                            <!-- image -->
+                            <img src="img/brigitte-v-cut-swimsuit-ultramarine.webp" alt="">
+                        </div>
+                        
+                        <div class="feature-card-footer">
+                            <div class="product-name">
+                                <h2>brigitte V Cut Swimsuit</h2>
+                            </div>
+                            <span style="color: Mediumslateblue; font-size: 14px;">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half"></i>
+                            </span>
+                            <div class="price">
+                                <h3>$28.80</h3>
+                            </div>
+                        </div>
+                        
+                    </a>
+                </div>
+                
+
+                <!-- Product 4 -->
+                <div class="featured-card">
+                    <div class="card-label"><span>NEW</span></div>
+                    <a href="#">
+                        <!-- Card header -->
+                        <div class="feature-card-header">
+                            <!-- image -->
+                            <img src="img/gala-logo-aquashort-black-lava-red.webp" alt="">
+                        </div>
+                        
+                        <div class="feature-card-footer">
+                            <div class="product-name">
+                                <h2>Aquashort Black lava red</h2>
+                            </div>
+                            <span style="color: Mediumslateblue; font-size: 14px;">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half"></i>
+                                <!-- <i class="fas fa-star-half"></i> -->
+                            </span>
+                            <div class="price">
+                                <h3>$18.74</h3>
+                            </div>
+                        </div>
+                        
+                    </a>
+                </div>
+              
+            </div>
+        </section>
+
+        <!-- ================ OFFER SECTION =============== -->
+        <section class="offer-section">
+            <div class="offer-content">
+                <h2 class="offer-title">Special Offers</h2>
+                <p class="offer-desc">Special summer offers & discounts this week for all products</p>
+                <button class="offer-bttn">Shop Now</button>
+            </div>
+        </section>
+
+        <!-- ======================= Lastest Products ==================== -->
+        <section class="latest-products" id="latest-products">
+            <div class="section-title">
+                <h1>Latest Products</h1>
+                <a href="common/products.html">View All</a>
+            </div>
+
+            <div class="products-section">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/gala-logo-aquashort-navy-bright-zest-811354-1.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="common/cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div class="product-details">
+                        <a href="common/view-product.html"class="product-name" onclick="forViewProduct(this)">Swim shorts</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+                        <span class="product-price">$12</span>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/leisure-16-inch-water-shorts-black-aqua-splash.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="common/cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div class="product-details">
+                        <a href="common/view-product.html"class="product-name" onclick="forViewProduct(this)">Leisure Water Shorts</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+                        <span class="product-price">$23.50</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/racerback-swimdress-with-boyleg-black-electric-pink.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="common/cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div class="product-details">
+                        <a href="common/view-product.html"class="product-name" onclick="forViewProduct(this)">Racerback Swimdress Pink/black</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+                        <span class="product-price">$19.85</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/SPSW8MS411C771.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="common/cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div class="product-details">
+                        <a href="common/view-product.html"class="product-name" onclick="forViewProduct(this)">Swim Trunks (blue)</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+                        <span class="product-price">$25.30</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/essential-splice-kneesuit-black-oxide-grey-black.webp" alt="">
+                        <span class="add-to-cart" title="Add To Cart" onclick="addToCart(this)"><i class="fas fa-cart-plus"></i></span>
+                        <a href="common/cart.html" class="buy-now" onclick="addToCart(this)">Buy now</a>
+                    </div>
+
+                    <div class="product-details">
+                        <a href="common/view-product.html"class="product-name" onclick="forViewProduct(this)">Splice Kneesuit Grey/Black</a>
+                        <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </span>
+                        <span class="product-price">$22.60</span>
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+
+
+        
+
+        <!-- All sponsors supporting our products -->
+        <section class="sponsors-section">
+            <!-- logo container -->
+            <div class="sponsors-logos">
+                <img src="img/brand1.png" alt="">
+                <img src="img/brand2.png" alt="">
+                <img src="img/brand3.png" alt="">
+                <img src="img/brand4.png" alt="">
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-navbar">
+            <div class="dwnl-app-section">
+                <h1 class="footer-section-title">Download Our App</h1>
+                <p class="footer-section-desc">Product Stores</p>
+                <img src="img/footerstore1.png" alt="">
+                <img src="img/footerstore2.png" alt="">
+            </div>
+
+            <div class="explore-section">
+                <h1 class="footer-section-title">Explore</h1>
+                <ul>
+                    <li><a href="#" class="footer-section-desc">Home</a></li>
+                    <li><a href="#" class="footer-section-desc">Products</a></li>
+                    <li><a href="#" class="footer-section-desc">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="group-members-section">
+                <h1 class="footer-section-title">Group Members</h1>
+                <ul>
+                    <li class="footer-section-desc">Praanjjal</li>
+                    <li class="footer-section-desc">Saksham</li>
+                    <li class="footer-section-desc">-</li>
+                    <li class="footer-section-desc">-</li>
+                </ul>
+            </div>
+
+            <div class="follow-us-section">
+                <h1 class="footer-section-title">Follow Us</h1>
+                <span class="social-icons"><i class="fab fa-facebook-square"></i></span>
+                <span class="social-icons"><i class="fab fa-tiktok"></i></i></span>
+                <span class="social-icons"><i class="fab fa-instagram-square"></i></span>
+                <span class="social-icons"><i class="fab fa-twitter"></i></span>
+                <span class="social-icons"><i class="fab fa-pinterest"></i></span>
+                <span class="social-icons"><i class="fab fa-reddit-square"></i></span>
+
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,383 @@
+/* Taken from google-font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+:root{
+    font-size: 16px;    
+    
+    /* declaring some variables that will be used later */
+    --text-primary: #011627;
+    --text-secondary: #41EAD4;
+    --bg-primary: #FDFFFC;
+    --bg-secondary: #EBECE9;
+}
+
+*{
+    /* includes margin in width */
+    box-sizing: border-box;
+    
+    margin: 0;
+    padding: 0;
+    
+    /* font stuff */
+    font-family: "Montserrat";
+}
+
+ul li a{
+    /* remove bullets */
+    list-style: none;
+    /* remove underline */
+    text-decoration: none;
+}
+
+body{
+    background-color: #FFFF;
+    color: black;
+}
+
+
+/* ====================================== Header + navbar ==================================== */
+.navbar{
+    z-index: 1;
+    /* position: fixed; */
+    width: 100%;
+
+    font-weight: 500;
+    background-color: var(--bg-primary);
+
+    /* making it a flex, all its child will be the items */
+    display: flex;
+    /* will evernly space out all the child members */
+    justify-content: space-between;     
+    
+    /* algin in the middle vertically */
+    align-items: center;
+    padding: 10px 10%;
+    
+    border-bottom:  1px solid rgb(238, 238, 238);
+    /* box-shadow: 0 0px 15px rgba(0,0,0,0.5); */
+}
+
+/* Our logo */
+.logo-container h1{
+    color: var(--text-primary);
+    font-size: 18px;
+    font-weight: 100;
+    transition: 200ms;
+}
+.logo-container span{
+    font-size: 18px;
+    font-weight: 600;
+    transition: 200ms;
+}
+.logo-container a{
+    text-decoration: none;
+}
+
+
+/* Our links; For each li */
+.navigation li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.navigation a{
+    color: var(--text-primary);
+    transition: 200ms;
+}
+
+.login{
+    text-decoration: none;
+    margin-right: 1rem;
+    color: var(--text-primary);
+}
+
+#bttn{
+    cursor: pointer;
+    padding: 8px 25px;
+    color: white;
+    background-color: #2b39ff;
+    border: none;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    transition: 200ms;
+}
+
+#menu-bttn{
+    display: none;
+}
+
+/* Highlighting effects */
+.navigation a:hover{
+    color: var(--text-secondary);
+}
+#bttn:active{
+    background-color: #648DE5;
+}
+
+.login:hover{
+    color: rgb(0, 212, 53);
+}
+
+
+/* Account Details */
+.account-details{
+    display: none;
+}
+
+#view-cart{
+    margin-left: 0.7rem;
+    color: var(--text-primary);
+}
+
+#view-cart{
+    margin-left: 0.5rem;
+}
+
+.account-details a{
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.account-section{
+    margin-left: 0.5rem;
+    transition: 200ms;
+}
+
+/* effects on account details */
+#view-cart:hover{
+    color: var(--text-secondary);
+}
+#view-cart:active{
+    color: #646464;
+}
+.account-section:hover{
+    color: var(--text-secondary);
+}
+.account-section:active{
+    color: rgb(0, 212, 53);
+}
+.logo-container:hover h1{
+    color: #1E96FC;
+}
+.logo-container:hover span{
+    color: #1E96FC;
+}
+
+
+.header-title{
+    /* margin: 2% 10%; */
+    display: flex;
+    align-items: center;
+    /* height:40vh; */
+    text-align: center;
+    background-image: url(../img/jeremy-bishop-7KLUhedmR2c-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.title{
+    background-color: rgb(0, 0 ,0 ,0.3);
+    width: 100%;
+    padding: 5rem;
+    color:var(--bg-primary);
+    letter-spacing: 0.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-transform:uppercase capitalize;
+}
+
+
+.account-settings-section{
+    margin: 5% 10%;
+    /* border:1px solid red; */
+}
+.account-settings-container{
+    position: relative;
+    /* width: 75%; */
+    height: auto;
+    padding: 1rem 0;
+    border-radius: 8px;
+    border:1px solid #c9cac7;
+}
+.account-settings-header{
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom:1px solid #b3b4b0;
+}
+
+.account-information-container{
+    padding: 0.5rem 1rem;
+}
+
+.account-information{
+    padding: 1rem;
+    /* border: 1px solid red; */
+}
+
+.information-title{
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.account-information{
+    /* width: 100%; */
+    /* height: 100%; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem 10rem;
+
+}
+.account-information input{
+    padding: 0.7rem 1rem;
+    width: 100%;
+    margin: 0.85rem 0.25rem;
+    border-radius: 5px;
+    border: 1px solid #babbb9;
+    box-shadow: 0 0px 15px rgba(0,0,0,0.1);
+}
+
+.account-information input:focus {
+    outline: none;
+}
+
+#edit-profile{
+    position: absolute;
+    color: #6d6d6d;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+#edit-profile:hover{
+    text-decoration: underline;
+
+}
+
+#confirm{
+    display: none;
+    margin: 0 auto;
+    background-color: #61c56d;
+    color: var(--bg-primary);
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    outline: none;
+    transition: 200ms;
+}
+#confirm:hover{
+    background-color: #71ad78;
+}
+#confirm:active{
+    background-color: #81C589;
+}
+
+
+
+
+
+
+
+/* for devices smaller than 600px */
+@media only screen and (max-width: 600px) {
+    .navbar{
+        flex-direction: row;
+        position: relative;
+    }
+    #menu-bttn{
+        z-index: 1;
+        /* position: absolute; */
+        /* left: 40; */
+        display: block;
+        /* transition: 10ms; */
+    }
+
+    .navigation{
+        display: none;
+        background-color: var(--bg-primary);
+        position: absolute;
+        top:0;
+        right: 0;
+        height: 100vh;
+        width: 50vh;
+        border-left: 1px solid lightgray;
+        box-shadow: 0 0px 15px rgba(0,0,0,0.1);
+    }
+    .navigation ul{
+        display: flex;
+        flex-direction: column;
+        margin-top: 40;
+        height: 50%;
+    }
+    
+    .navigation li{
+        padding: 5% 10%;
+        margin: 10% 0 10% 5%;
+        font-weight: 500;
+    }
+    
+    .logo-container a h1{
+        font-size: 0.65rem;
+    }
+    .logo-container a span{
+        font-size: 0.75rem;
+    }
+  
+    .login{
+        font-size: 0.9rem;
+        margin-right: 0rem;
+    }
+    #bttn{
+        padding: 1% 5px;
+        margin-left: 5px
+    }
+    .account-access{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .account-details{
+        margin-left: auto;
+        /* position: absolute; */
+        margin-right: 1rem;
+        /* right: 0; */
+    }
+    
+    .account-name{
+        display: none;
+    }
+
+    /* menu animations */
+    #menu-bttn:active{
+        color: #868686;
+    }
+
+    .header-main-content-container{
+        padding-top: 25px;
+        margin-bottom: 30px;
+    }
+
+    .main-content{
+        padding: 0;
+    }
+    .main-title{
+        font-size: 1.5rem;
+    }
+    .main-desc{
+        display: none;
+    }
+
+    .account-information input{
+        padding: 0.7rem 1rem;
+        width: 90%;
+    }
+}
+
+/* screens bigger than 800px */
+@media only screen and (max-width:900px) {
+    .account-name{
+        display: none;
+    }
+}

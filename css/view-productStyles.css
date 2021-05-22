@@ -1,0 +1,481 @@
+/* Taken from google-font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+:root{
+    font-size: 16px;    
+    
+    /* declaring some variables that will be used later */
+    --text-primary: #011627;
+    --text-secondary: #41EAD4;
+    --bg-primary: #FDFFFC;
+    --bg-secondary: #EBECE9;
+}
+
+*{
+    /* includes margin in width */
+    box-sizing: border-box;
+    
+    margin: 0;
+    padding: 0;
+    
+    /* font stuff */
+    font-family: "Montserrat";
+}
+
+ul li a{
+    /* remove bullets */
+    list-style: none;
+    /* remove underline */
+    text-decoration: none;
+}
+
+body{
+    background-color: #FFFF;
+    color: black;
+}
+
+
+/* ====================================== Header + navbar ==================================== */
+.navbar{
+    z-index: 1;
+    /* position: fixed; */
+    width: 100%;
+
+    font-weight: 500;
+    background-color: var(--bg-primary);
+
+    /* making it a flex, all its child will be the items */
+    display: flex;
+    /* will evernly space out all the child members */
+    justify-content: space-between;     
+    
+    /* algin in the middle vertically */
+    align-items: center;
+    padding: 10px 10%;
+    
+    border-bottom:  1px solid rgb(238, 238, 238);
+    /* box-shadow: 0 0px 15px rgba(0,0,0,0.5); */
+}
+
+/* Our logo */
+.logo-container h1{
+    color: var(--text-primary);
+    font-size: 18px;
+    font-weight: 100;
+    transition: 200ms;
+}
+.logo-container span{
+    font-size: 18px;
+    font-weight: 600;
+    transition: 200ms;
+}
+.logo-container a{
+    text-decoration: none;
+}
+
+/* Our links; For each li */
+.navigation li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.navigation a{
+    color: var(--text-primary);
+    transition: 200ms;
+}
+
+.login{
+    text-decoration: none;
+    margin-right: 1rem;
+    color: var(--text-primary);
+}
+
+#bttn{
+    cursor: pointer;
+    padding: 8px 25px;
+    color: white;
+    background-color: #2b39ff;
+    border: none;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    transition: 200ms;
+}
+
+#menu-bttn{
+    display: none;
+}
+
+/* Highlighting effects */
+.navigation a:hover{
+    color: var(--text-secondary);
+}
+#bttn:active{
+    background-color: #648DE5;
+}
+
+.login:hover{
+    color: rgb(0, 212, 53);
+}
+
+
+/* Account Details */
+.account-details{
+    display: none;
+}
+
+#view-cart{
+    margin-left: 0.7rem;
+    color: var(--text-primary);
+}
+
+.account-details a{
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.account-section{
+    margin-left: 0.5rem;
+    transition: 200ms;
+}
+
+/* effects on account details */
+#view-cart:hover{
+    color: var(--text-secondary);
+}
+#view-cart:active{
+    color: #646464;
+}
+.account-section:hover{
+    color: var(--text-secondary);
+}
+.account-section:active{
+    color: rgb(0, 212, 53);
+}
+.logo-container:hover h1{
+    color: #1E96FC;
+}
+.logo-container:hover span{
+    color: #1E96FC;
+}
+
+
+
+/* ======================================== Product showcase Section ========================================*/
+
+.product-section{
+    margin: 5% 15%;
+}
+
+/* We'll be using grid again for this, grid is just too cool... */
+/* its like the modern version of tables */
+.content-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+    gap: 5rem 3rem;
+    /* grid-auto-rows: ; */
+}
+
+.image-section{
+    height: 100%;
+    width: 100%;
+}
+.splide{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red;    */  
+}
+
+.splide__track{
+    /* border: 1px solid peru;    */
+    /* transform: translateY(-0.5rem); */
+    
+    border: 1px solid #babbb9;   
+    border-radius: 10px;
+    height: 100%;
+}
+
+.splide__list{
+    height: 100%;
+}
+
+.splide__slide{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.splide__slide img{
+    max-width: 65%;
+    max-height: 65%;
+    transition: 200ms;
+}
+
+
+.product-info-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.product-category{
+    color: #6d6d6d;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-bottom: 2%;
+    text-transform: capitalize;
+}
+
+.product-name{
+    font-size: 2.75rem;
+    text-transform: capitalize;
+    font-weight: 900;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+
+.product-rating{
+    font-size: 1.15rem;
+    color: #daa42f;
+    padding-bottom: 3%;
+}
+
+.product-price{
+    color:rgb(75, 75, 75, 1);
+    font-size: 1.35rem;
+    font-weight: 700;
+    padding-top: 1%;
+    padding-bottom: 4%;
+}
+
+.product-size{
+    font-size: 1.25rem;
+    /* margin-top: 2%; */
+    margin-bottom: 4%;
+}
+.product-size select{
+    margin: 0 2%;
+    width: 21%;
+    padding: 0.3rem;
+    border: 1px solid #2c38da;
+    border-radius: 10px;
+}
+
+.status{
+    color:#2db811;
+    /* font-size: 1.5rem; */
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.product-select-quantity{
+    width: 4rem;
+    height: 2rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.8rem ;
+    border: 1.5px solid #2b39ff;
+    border-radius: 8px;
+}
+
+.add-to-cart{
+    width: 110px;
+    /* hie */
+    padding: 10px 12px;
+    border: none;
+    text-transform: capitalize;
+    border-radius: 3px;
+    margin: 1.25rem 0;
+    color: var(--bg-primary);
+    background-color: #ED254E;
+    transition: 200ms;
+}
+
+.desc-title{
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+
+/* effects */
+.splide__track:hover{
+    box-shadow: 0 0px 15px rgba(0,0,0,0.1);
+}
+.product-size select:hover, .product-select-quantity:hover{
+    border: 1px solid #2eb19f;
+}
+.add-to-cart:hover{
+    background-color: #e94c6c;;
+}
+.add-to-cart:active{
+    background-color: #a81a36;
+}
+
+
+/*============================================== FOOTER ============================================ */
+footer{
+    background-color: black;
+    color: rgb(209, 209, 209);
+    width: 100%;
+    margin-top: 18%;
+    /* height: 18rem; */
+}
+
+.footer-navbar{
+    padding: 3% 10% 2%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem,1fr));
+    gap:2rem 0;
+}
+
+.footer-section-title{
+    text-transform: uppercase;
+    font-size:1rem;
+    margin-bottom: 5%;
+}
+
+.footer-section-desc{
+    color: #868686;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.dwnl-app-section{
+    display: flex;
+    flex-direction: column;
+}
+.dwnl-app-section img{
+    margin-top: 1rem;
+    height: auto;
+    width: 10rem;
+}
+
+
+.footer-navbar ul{
+    list-style: none;
+}
+
+.explore-section li{
+    margin-top: 1rem;
+}
+
+.explore-section a:hover{
+    color:var(--bg-secondary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for devices smaller than 600px */
+@media only screen and (max-width: 600px) {
+    .navbar{
+        flex-direction: row;
+        position: relative;
+    }
+    #menu-bttn{
+        z-index: 1;
+        /* position: absolute; */
+        /* left: 40; */
+        display: block;
+        /* transition: 10ms; */
+    }
+
+    .navigation{
+        display: none;
+        background-color: var(--bg-primary);
+        position: absolute;
+        top:0;
+        right: 0;
+        height: 100vh;
+        width: 50vh;
+        border-left: 1px solid lightgray;
+        box-shadow: 0 0px 15px rgba(0,0,0,0.1);
+    }
+    .navigation ul{
+        display: flex;
+        flex-direction: column;
+        margin-top: 40;
+        height: 50%;
+    }
+    
+    .navigation li{
+        padding: 5% 10%;
+        margin: 10% 0 10% 5%;
+        font-weight: 500;
+    }
+    
+
+    .logo-container a h1{
+        font-size: 0.65rem;
+    }
+    .logo-container a span{
+        font-size: 0.75rem;
+    }
+  
+    .logo-container a h1{
+        font-size: 0.65rem;
+    }
+    .logo-container a span{
+        font-size: 0.75rem;
+    }
+  
+    .login{
+        font-size: 0.9rem;
+        margin-right: 0rem;
+    }
+    #bttn{
+        padding: 1% 5px;
+        margin-left: 5px
+    }
+    .account-access{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .account-details{
+        margin-left: auto;
+        /* position: absolute; */
+        margin-right: 1rem;
+        /* right: 0; */
+    }
+    
+    .account-name{
+        display: none;
+    }
+
+    /* menu animations */
+    #menu-bttn:active{
+        color: #868686;
+    }
+
+    .content-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+        gap: 5rem 0rem;
+        /* grid-auto-rows: ; */
+    }
+}
+
+
+/* screens bigger than 800px */
+@media only screen and (max-width:900px) {
+    .account-name{
+        display: none;
+    }
+}

@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src = "../js/entry.js"></script>
+    <script src="../js/mainFunctions.js"></script>
+
+     <!-- JS plugin SweetAlert  -->
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+     
+    <link rel="stylesheet" href="../css/loginStyles.css">
+</head>
+<body>
+    <div class="content-container">
+        
+        <div class="logo-container">
+            <a href="../index.html">
+                <h1>SWIM<span>FINE</span></h1>
+            </a>
+        </div>
+
+        <div class="login-container">
+            <form action="#">
+                <!-- ALl the login details here -->
+                <h1>Login</h1>
+                <input type="text" name="" id="user" placeholder="Enter Email">
+                <!-- password is hidden -->
+                <input type="password" name="" id="pass" placeholder="Enter Password">
+                
+                <a href="#">Forgot your password?</a>
+                
+                <!-- resets all the inputs once clicked -->
+                <!-- on click will check the inputs -->
+                <button id = "logIn" type = "reset" onclick="login()">Log In</button>
+                
+                <a href="register.html">Don't have an account? Sign up here</a>
+            </form>
+        </div>
+
+        <div class="wrapper-right-panel">
+            <div class="overlay">
+                <div class="right-panel-container">
+                    <h1> Welcome Back!</h1>
+                    <p>Login to access all the hundreds of fine swimwear for you!</p>
+                </div>
+            </div>
+          
+            <!-- <img src=> -->
+        </div>
+    </div>
+</body>
+</html>

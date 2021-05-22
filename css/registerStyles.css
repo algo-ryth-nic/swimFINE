@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+*{
+	box-sizing: border-box;
+}
+
+
+body{
+    background: #f8dede;
+
+    /* Aliging to the middle */
+    display: flex;
+    align-items: center;       /* vertical */
+    justify-content: center;   /* horizontal */
+
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+	overflow: auto;
+
+}
+
+.content-container{
+    background-color: #fff;
+    position: relative;
+
+    width: 1024px;
+	max-width: 100%;
+	min-height: 680px;
+    
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+
+/* ============== LOGO CONTAINER ==============*/
+.logo-container{
+	position: absolute;
+	z-index: 1;
+	top:0rem;
+	left: 1rem;
+}
+.logo-container a{
+	color: black;
+	text-decoration: none;
+}
+.logo-container h1{
+    font-size: 18px;
+    font-weight: 100;
+}
+.logo-container span{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
+.registration-container{
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+	width: 50%;
+	/* z-index: 2; */
+    height: 100%;
+}
+
+.registration-container form {
+	background-color: #FFFFFF;
+    
+    /* centering */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+
+	padding: 0 50px;
+	height: 100%;
+
+    /* centering text */
+	text-align: center;
+}
+
+.registration-container h4{
+	font-size: 14px;
+	font-weight: 400;
+	margin-bottom: 0;
+	width: 100%;
+	text-align: left;
+}
+
+.registration-container p{
+	font-size: 12px;
+	font-weight: normal;
+	width: 100%;
+	text-align: left;
+	margin-top: 0px;
+	color: rgb(87, 87, 87);
+}
+
+.password-container{
+	width: 100%;
+}
+.password-container input{
+	width: 49%;
+	margin: 10px 0px;
+	/* border: 1px solid red; */
+}
+
+
+label{
+	font-size: 14px;
+	font-weight: 400;
+	width: 100%;
+	text-align: left;
+}
+/* .login-container h1{
+    font-weight: bold;
+    display: block;
+    /* position: absolute;
+    top: 12%; }*/
+
+.registration-container input{
+    background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 10px 0;
+	width: 100%;
+}
+
+button {
+	font-size: 12px;
+	color: #FFFFFF;
+
+	border: 1px solid #2b39ff;
+	background-color: #2b39ff;
+	border-radius: 20px;
+	font-weight: bold;
+	padding: 12px 45px;
+    margin: 30px 0px 5px 0px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+/* ========================== FOR RIGHT PANEL  ========================== */
+
+.wrapper-right-panel{
+    position: absolute;
+	/* top: 60px; */
+	left: 50%;
+	width: 50%;
+	height: 100%;
+
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	background-image: url("..//img/forRegistration.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.overlay{
+    /* background: #4164ff; */
+	background-color: rgb(36, 36, 36, 0.5);
+    color: #FFFFFF;
+}
+
+.right-panel-container{
+	text-transform: capitalize;
+	/* width: 50%; */
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.right-panel-container h1{
+    font-weight: bold;
+	margin: 0;
+}
+
+.right-panel-container p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 30px;
+	letter-spacing: 1px;
+	margin: 20px 0 30px;
+}
+
+
+/* For screens smaller than 600px */
+@media only screen and (max-width:600px) {
+	body{
+		overflow: auto;
+	}
+	.wrapper-right-panel{
+		display: none;
+	}
+
+	.registration-container{
+		width: 100%;
+	}
+}

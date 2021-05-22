@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | SwimFine</title>
+
+    <link rel="stylesheet" href="../css/profileStyle.css">
+
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/16b11a0383.js" crossorigin="anonymous"></script>
+
+    <script src="../js/mainFunctions.js"></script>
+    <script src="../js/profile.js"></script>
+    <script src="../js/entry.js"></script>
+    <!-- JS plugin SweetAlert  -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <!-- logo container -->
+            <div class="logo-container">
+                <a href="../index.html">
+                    <h1>SWIM<span>FINE</span></h1>
+                </a>
+            </div>
+            
+            <!-- links container -->
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../index.html"> Home </a></li>
+                    <li><a href="products.html"> Products </a></li>
+                    <li><a href="profile.html"> Account </a></li>
+                </ul>
+            </nav>
+
+            <!-- When not logged in -->
+            <div class="account-access">
+                <a href="login.html" class="login">Log In</a>
+                <!-- button -->
+                <button id = "bttn" onclick= "window.location.href='register.html';" type="reset"> Sign up </button>
+
+                <a href="./cart.html" id="view-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+
+            <!-- If succesfully logged in/registered -->
+            <div class="account-details">
+                <a href="#" title="My Account" class="account-section">
+                    <span class="account-icon"><i class="far fa-user-circle"></i></span>
+                    <span class="account-name"></span>
+                </a>
+
+                <a href="./cart.html" id="view-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+            
+            <i id="menu-bttn" class="fas fa-bars fa-1x"></i>    
+        
+        </div>
+
+        <div class="header-title">
+            <h3 class="title">Profile</h3>
+        </div>
+    </header>
+    
+    <main>
+        <section class="account-settings-section">
+            <div class="account-settings-container">
+                
+                <div class="account-settings-header">
+                    <h3 class="settings-title">My account</h3>
+                </div>
+
+                <div class="account-information-container">
+                    <div class="account-information-title">
+                        <h4 class="information-title">User Information</h4>
+                    </div>
+
+                    <div class="account-information">
+                        <label for="#username">
+                            Username
+                            <input id = "username" type="text" placeholder="Username" readonly>
+                        </label>
+                        
+                        <label for="#email">
+                            Email
+                            <input id = "email" type="text" placeholder="Email" readonly>
+                        </label>
+
+                        <label for="#phno">
+                            Phone No.
+                            <input id = "phno" type="text" placeholder="+1 416 555 0134 " readonly>
+                        </label>
+
+                        <label for="#pass">
+                            Password
+                            <input id = "pass" type="password" readonly>
+                        </label>
+
+                        <label for="#confirm-password">
+                            Confirm Password
+                            <input id = "confirm-pass" type="password" readonly>
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <a id="edit-profile">Edit Profile</a>
+                <button id="confirm">Done</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

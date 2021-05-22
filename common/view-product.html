@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page | SWIMFINE</title>
+
+    <link rel="stylesheet" href="..//css/view-productStyles.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/mainFunctions.js"></script>
+    <script src="../js/viewProduct.js"></script>
+
+    <script src="https://kit.fontawesome.com/16b11a0383.js" crossorigin="anonymous"></script>
+
+    <!-- JS plugin SweetAlert  -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- For SPLIDE plugin  -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+
+    <!-- <script>
+        document.addEventListener( 'DOMContentLoaded', function () {
+            new Splide( '.splide' ).mount();
+        } );
+    </script> -->
+
+    <!-- For Zoom, Magnify JS Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/js/jquery.magnify.min.js" integrity="sha512-YKxHqn7D0M5knQJO2xKHZpCfZ+/Ta7qpEHgADN+AkY2U2Y4JJtlCEHzKWV5ZE87vZR3ipdzNJ4U/sfjIaoHMfw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/js/jquery.magnify.js" integrity="sha512-+8UjzErRT0NC6aEUwkW8TrucGEUHaq1pXSNiZz+WcE3iO6a+Y5joy6OdsS+VTkFGGkazVn35Xm5I+dksnjBlEg==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/css/magnify.css" integrity="sha512-JxBFHHd+xyHl++SdVJYCCgxGPJKCTTaqndOl/n12qI73hgj7PuGuYDUcCgtdSHTeXSHCtW4us4Qmv+xwPqKVjQ==" crossorigin="anonymous" />
+    
+    <!-- The Zoom function -->
+    <!-- <script>
+        $(document).ready(function() {
+            $(".splide__slide img").magnify();
+        });
+    </script> -->
+
+    <!-- To center the div -->
+    <style>
+        .magnify{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 1px solid blue; */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <!-- logo container -->
+            <div class="logo-container">
+                <a href="../index.html">
+                    <h1>SWIM<span>FINE</span></h1>
+                </a>
+            </div>
+            
+            <!-- links container -->
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../index.html"> Home </a></li>
+                    <li><a href="products.html"> Products </a></li>
+                    <li><a href="#"> About </a></li>
+                </ul>
+            </nav>
+
+            <!-- When not logged in -->
+            <div class="account-access">
+                <a href="login.html" class="login">Log In</a>
+                <!-- button -->
+                <button id = "bttn" onclick= "window.location.href='register.html';" type="reset"> Sign up </button>
+                <a href="./cart.html" id="view-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+
+            <!-- If succesfully logged in/registered -->
+            <div class="account-details">
+                <a href="profile.html" title="My Account" class="account-section">
+                    <span class="account-icon"><i class="far fa-user-circle"></i></span>
+                    <span class="account-name"></span>
+                </a>
+                
+                <a href="./cart.html" id="view-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+            
+            <i id="menu-bttn" class="fas fa-bars fa-1x"></i>    
+        
+        </div>
+
+    </header>
+
+
+    <main>
+        <section class="product-section">
+            <div class="content-container">
+                
+                <div class="image-section">
+                    <div class="splide">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                              
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-info-section">
+                    <h4 class="product-category">
+                        Home/T-Shirt
+                    </h4>
+
+                    <h1 class="product-name">
+                        Swim shorts
+                    </h1>
+
+                    <span class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </span>
+
+                    <span class="product-price">
+                        <span class="price-currency">$</span>12.00
+                    </span>
+
+                    <div class="product-size">
+                        <label for="product-sizes">Size:
+                            <select name="size" class="product-sizes" required>
+                                <option value="" selected disabled hidden>Select Size</option>
+                                <option value="">XXL</option>
+                                <option value="">XL</option>
+                                <option value="">L</option>
+                                <option value="">M</option>
+                                <option value="">S</option>
+                            </select>
+                        </label>
+                    </div>
+                    
+                    <span class="status">Available/In Stock</span>
+
+                    <input type="number" class="product-select-quantity" min="1" placeholder="1" value="1">
+
+                    <button class="add-to-cart">Add to Cart</button>
+
+                    <div class="product-desc">
+                        <h2 class="desc-title">Product details</h2>
+                        <p class="desc-content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id dignissim mauris, ut euismod velit. Cras magna dolor, consequat eu pulvinar et, tempus vitae massa. Quisque sodales ornare enim, dignissim auctor ante venenatis non.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-navbar">
+            <div class="dwnl-app-section">
+                <h1 class="footer-section-title">Download Our App</h1>
+                <p class="footer-section-desc">Product Stores</p>
+                <img src="../img/footerstore1.png" alt="">
+                <img src="../img/footerstore2.png" alt="">
+            </div>
+
+            <div class="explore-section">
+                <h1 class="footer-section-title">Explore</h1>
+                <ul>
+                    <li><a href="#" class="footer-section-desc">Home</a></li>
+                    <li><a href="#" class="footer-section-desc">Products</a></li>
+                    <li><a href="#" class="footer-section-desc">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="group-members-section">
+                <h1 class="footer-section-title">Group Members</h1>
+                <ul>
+                    <li class="footer-section-desc">Praanjjal</li>
+                    <li class="footer-section-desc">Saksham</li>
+                    <li class="footer-section-desc">-</li>
+                    <li class="footer-section-desc">-</li>
+                </ul>
+            </div>
+
+            <div class="follow-us-section">
+                <h1 class="footer-section-title">Follow Us</h1>
+                <span class="social-icons"><i class="fab fa-facebook-square"></i></span>
+                <span class="social-icons"><i class="fab fa-tiktok"></i></i></span>
+                <span class="social-icons"><i class="fab fa-instagram-square"></i></span>
+                <span class="social-icons"><i class="fab fa-twitter"></i></span>
+                <span class="social-icons"><i class="fab fa-pinterest"></i></span>
+                <span class="social-icons"><i class="fab fa-reddit-square"></i></span>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

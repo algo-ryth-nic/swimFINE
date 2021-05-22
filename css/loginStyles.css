@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+*{
+	box-sizing: border-box;
+}
+
+
+body{
+    background: #DEEAF8;
+
+    /* Aliging to the middle */
+    display: flex;
+    align-items: center;       /* vertical */
+    justify-content: center;   /* horizontal */
+
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}
+
+.content-container{
+    background-color: #fff;
+    position: relative;
+
+    width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+    
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/* ============== LOGO CONTAINER ==============*/
+.logo-container{
+	position: absolute;
+	z-index: 1;
+	top:0rem;
+	left: 1rem;
+    text-decoration: none;
+}
+.logo-container h1{
+    font-size: 18px;
+    font-weight: 100;
+}
+.logo-container span{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.login-container{
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+	width: 50%;
+	/* z-index: 2; */
+    height: 100%;
+}
+
+.login-container form {
+	background-color: #FFFFFF;
+    
+    /* centering */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+
+	padding: 0 50px;
+	height: 100%;
+
+    /* centering text */
+	text-align: center;
+}
+
+.login-container h1{
+    font-weight: bold;
+    display: block;
+    /* position: absolute;
+    top: 12%; */
+}
+
+input{
+    background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 10px 0;
+	width: 100%;
+}
+
+a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+.login-container a:last-child{
+	position: absolute;
+	bottom: 20;
+}
+button {
+	font-size: 12px;
+	color: #FFFFFF;
+
+	border: 1px solid #2b39ff;
+	background-color: #2b39ff;
+	border-radius: 20px;
+	font-weight: bold;
+	padding: 12px 45px;
+    margin: 5px 0px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: 200ms;
+	outline: none;
+}
+
+.wrapper-right-panel{
+    position: absolute;
+	/* top: 60px; */
+	left: 50%;
+	width: 50%;
+	height: 100%;
+
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url("..//img/forLogin.jpg");
+
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.overlay{
+	background-color: rgb(36, 36, 36, 0.5);
+    color: white;
+}
+
+.right-panel-container{
+	text-transform: capitalize;
+	/* width: 50%; */
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.right-panel-container h1{
+    font-weight: bold;
+	margin: 0;
+}
+
+.right-panel-container p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 30px;
+	letter-spacing: 1px;
+	margin: 20px 0 30px;
+}
+
+
+/* effects */
+button:hover{
+	background-color: #0914b3;
+}
+button:active{
+	opacity: 0.7;
+}
+
+/* For screens smaller than 600px */
+@media only screen and (max-width:600px) {
+	.wrapper-right-panel{
+		display: none;
+	}
+
+	.login-container{
+		width: 100%;
+	}
+}
