@@ -6,3 +6,5 @@ A front-end only e-commerce site for college project.
 * swal (notification): https://sweetalert.js.org/guides/ 
 * slideshow: http://kenwheeler.github.io/slick/
 * magnify  
+
+[View](https://github.com/recursive-PJ/swimFINE)
