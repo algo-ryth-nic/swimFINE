@@ -7,4 +7,4 @@ A front-end only e-commerce site for college project.
 * slideshow: http://kenwheeler.github.io/slick/
 * magnify  
 
-[View](https://recursive-pj.github.io/swimFINE/)
+[View](https://algo-ryth-nic.github.io/swimFINE/)
